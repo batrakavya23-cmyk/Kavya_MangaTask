@@ -4,7 +4,7 @@
 
 Approach;
 
-The goal was to extract dialogues from three consecutive manga pages , maintain the reading order and speaker identities across each sequence. This pipeline combines a YOLO-based comic speech bubble detector that identifies the dialogue regions , PaddleOCR for text recognition, MAGI provides visual representations, and then a Random Forest classifier was used to estimate whether two dialogue regions belong to the same speaker , and clustering to assign the speaker IDs.&#x20;
+The goal was to extract dialogues from three consecutive manga pages , maintain the reading order and speaker identities across each sequence. This pipeline combines a YOLO-based comic speech bubble detector that identifies the dialogue regions , PaddleOCR for text recognition, MAGI provides visual representations, and then a Random Forest classifier was used to estimate whether two dialogue regions belong to the same speaker , and clustering to assign the speaker IDs
 
 
 
@@ -21,7 +21,7 @@ The goal was to extract dialogues from three consecutive manga pages , maintain 
 
 
 
-Basically what posed as the biggest challenge for me was how each models performance directly affected the other's thus the error propagates and compunds with each layer.  The pretrained models I used provided a good workable starting point , fine tuning them did not really work for this pipeline, making marginal and infact negative difference . Validation experiments were useful helped comparing the configurations before making the decisions. However , the results are nowhere I wanted them to be, with speaker clustering being the weakest point, along with maintaining their identities across a sequence is the most challenging part
+Basically what posed as the biggest challenge for me was combining each model's most suitable version for the project ,since each models performance directly affected the other's, the error propagates and compunds with each layer.  The pretrained models I used provided a good workable starting point , fine tuning them did not really work for this pipeline, making marginal and infact negative difference . Validation experiments were useful helped comparing the configurations before making the decisions. However , the results are nowhere I wanted them to be, with speaker clustering being one of the weakest point, along with maintaining their identities across a sequence was the most challenging part.
 
 
 
